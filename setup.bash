@@ -4,6 +4,7 @@
 
 [[ ! -z $(lsmod | grep rtmouse) ]] && { echo "rtmouse driver has been installed";exit 1; }
 
+sleep 5
 cd /home/ubuntu/RaspberryPiMouse/src/drivers/
 insmod rtmouse.ko || /bin/bash /home/ubuntu/RaspberryPiMouse/utils/build_install.bash
 
